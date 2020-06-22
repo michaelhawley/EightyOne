@@ -4,19 +4,109 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import "../scss/styles.scss"
 
-const IndexPage = () => (
+import BlogFrame from '../components/BlogFrame'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function Testing (a,b) {
+  console.log(a)
+  return (
+    <div>abc</div>
+  )
+}
+
+
+const IndexPage = ({data}) => { 
+  
+  
+  const {edges} = data.BlogPosts
+  const images = data.TitleImages.edges
+
+
+
+  return(
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div class = "PrimaryContainer">
+      <div class = "LeftContainer">a</div>
+      <div class = "CenterContainer">
+        <BlogFrame data = {edges} images = {images} />  
+      </div>
+      <div class = "RightContainer">b</div>
+       
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
+}
+
+
+
+
+export const query = graphql`
+  query HomepageQuery {
+    BlogPosts: allMarkdownRemark(
+      sort: {order: DESC, fields:[frontmatter___date]}    )
+    {  
+      edges {
+        node {
+          parent {
+        	... on File {
+            relativePath
+        	}
+      		}
+          
+          frontmatter {
+            title
+            path
+            image
+          }
+        }  
+      }      
+    }
+
+    TitleImages: allFile(
+      filter: {
+        sourceInstanceName: {eq: "blogPosts"}
+        name: {regex: "/^.itle/"} 
+      }
+      
+      )
+  {
+    edges {
+      node {
+      relativePath
+      childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+            
+          }
+        }
+      }
+    }
+  }
+
+    BackupImage: allFile(filter: {
+        sourceInstanceName: {eq: "images"}
+        name: {regex: "/^.ackup/"}
+      })
+    {
+      edges {
+        node {
+        childImageSharp {
+            fluid(maxWidth: 300, quality: 50) {
+          originalName
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+  
+`
+
+
 
 export default IndexPage

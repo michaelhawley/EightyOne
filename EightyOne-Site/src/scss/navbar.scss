@@ -1,0 +1,68 @@
+
+@import "../scss/basics.scss";
+
+$NavButtonHeight: 30px;
+$NavContainerHeight: 50px;
+
+@media screen and (max-width: 600px) {
+    .NavContainer{
+        background-color: red;
+        display: none;
+    }
+}
+
+.NavContainer{
+    height: $NavContainerHeight;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: $Stroke_Thin solid $Color_Main;
+    display: flex;
+    padding: 0px;
+    
+}
+
+.NavButton {
+    flex-grow: 1;
+    text-align: center;
+    height: 100%;
+}
+
+.NavEmptyHeight{
+    position:relative;
+    height:100%;
+}
+
+.NavCentre{
+    line-height: $NavButtonHeight;
+    white-space: nowrap;
+  }
+
+.NavButtonHeight{
+    height: $NavButtonHeight;
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    margin-top:-$NavButtonHeight/2  ;
+    text-align: center;
+    vertical-align: middle;
+    transition: ease-in-out 0.12s;
+}
+
+.NavButtonHeight{
+    &:hover {
+        top: 50%;
+        margin-top: -$NavButtonHeight/2 - $NavButtonHeight/6 ;
+        transition: ease-in-out 0.12s;
+    }
+
+}
+
+
+
+
+
+
+
+

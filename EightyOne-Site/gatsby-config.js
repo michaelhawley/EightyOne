@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `EightyONe`,
+    title: `EightyOne`,
     description: `A blog by Michael`,
     author: `Michael Hawley`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
 
 
     {

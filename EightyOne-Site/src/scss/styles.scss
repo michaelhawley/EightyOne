@@ -1,36 +1,48 @@
 
 @import "basics.scss";
 
+  .HeaderStyle{
+    height: 100px;
+  }
+
   .test {
     color: $Color_Main;
     font-family: 'Work Sans';
   }
 
   .PrimaryContainer{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+
     // border: 1px solid red;
     display: flex;
+    border: 1px solid black;
   }
   .CenterContainer{
     // border: 1px solid blue;
-    display: flex;
-    flex-grow:1;
-    background-color: red;
-
-  }
-  .LeftContainer{
-    border: 1px solid blue;
-    display: flex;
     
+    
+    width: 1200px;
+    flex-shrink: 1;
+  }
+
+
+  .CenterContainer_Blog{
+    
+    padding: 20px;
+    padding-top: 20px;
+    width: 1200px;
+    flex-shrink: 1;
+  }
+
+  .LeftContainer{
+    flex-grow: 1;
     min-width: $MarginWidthN;
   }
   .RightContainer{
     // border: 1px solid blue;
-    display: flex;
-    
+    flex-grow: 1;
     min-width: $MarginWidthN;
+    
   }
 
   html {

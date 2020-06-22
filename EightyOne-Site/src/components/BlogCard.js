@@ -12,11 +12,14 @@ function ImgCatch(image){
     if(image.image){
         
         return (
-            <div class = "CardImage" >
-                {/* <Img fluid={image.image} style={{ margin: '1rem', maxHeight: '100%' }}
-                imgStyle={{ objectFit: 'contain' }} /> */}
-                <Img fluid={image.image} className = {ReactStyles.ImgTest} />
-            </div>
+            
+                <div class = "CardImage" >
+                    {/* <Img fluid={image.image} style={{ margin: '1rem', maxHeight: '100%' }}
+                    imgStyle={{ objectFit: 'contain' }} /> */}
+
+                    <Link to = {image.link}> <Img fluid={image.image} className = {ReactStyles.ImgTest} /></Link>
+                </div>
+            
         )}
     else{
         return(
@@ -30,14 +33,14 @@ function BlogCard(d) {
 
     return (
         
-        
+
             
            
-            <Card className = {ReactStyles.Card}>
-                    <ImgCatch image = {d.blogimage}/>
+            <Card fluid className = {ReactStyles.BlogCard}>
+                     <ImgCatch image = {d.blogimage} link = {d.pathSlug} />
                     <div class = "CardText">
                         <Card.Title className = {ReactStyles.CardTitle}>  
-                            <Link to ={d.pathSlug} className = {ReactStyles.CardLink}> {d.titleSlug} </Link> 
+                            <Link to ={d.pathSlug} className = {ReactStyles.CardLink}> {d.titleSlug}  </Link>
                         </Card.Title>
                     </div>
                 

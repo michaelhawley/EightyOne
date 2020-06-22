@@ -1,5 +1,5 @@
 ---
-path: "/second-post"
+path: "/third-post"
 date: "2020-06-12"
 title: "My third Post"
 tags: ['this', 'Python', 'second']

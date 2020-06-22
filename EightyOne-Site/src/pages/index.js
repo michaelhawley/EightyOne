@@ -29,11 +29,11 @@ const IndexPage = ({data}) => {
   return(
   <Layout>
     <div class = "PrimaryContainer">
-      <div class = "LeftContainer">a</div>
+      <div class = "LeftContainer"></div>
       <div class = "CenterContainer">
         <BlogFrame data = {edges} images = {images} />  
       </div>
-      <div class = "RightContainer">b</div>
+      <div class = "RightContainer"></div>
        
     </div>
   </Layout>

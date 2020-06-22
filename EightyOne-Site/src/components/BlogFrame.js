@@ -47,20 +47,21 @@ function BlogFrame(b){
     function MakeColumn(data){
         const id = data.row * NPerLine + data.col // work out which blog we want to calll
         if (id < nBlogs){
-            const blogDetails = (blogData[id].node.parent)
-
-            const idImage = (blogDetails.relativePath) // get the associated image
+            const blogDetails = (blogData[id].node)
+            const blogContent = blogDetails.frontmatter
+            const idImage = (blogDetails.parent.relativePath) // get the associated image
             const BlogImage = FrontImage(idImage)
             
-                    
+            console.log(b)        
             return(
-                <Col md style = {{padding: ".7em"}}>
-                    <BlogCard pathSlug = {blogDetails.path} titleSlug = {blogDetails.title} blogimage = {BlogImage} blogID = {id}/>
+                <Col md className={ReactStyles.ColCard}>
+                    
+                    <BlogCard pathSlug = {blogContent.path} titleSlug = {blogContent.title} blogimage = {BlogImage} blogID = {id}/>
                 </Col>
             ) 
         }else{
         return(
-            <Col md style = {{padding: ".7em"}}>
+            <Col md >
                 
             </Col>
 

@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 
 import "../scss/styles.scss"
-import "../scss/test.sass"
+
 
 
 const Layout = ({ children }) => {
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main>{children}</main>
+        <main><body>{children} </body></main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

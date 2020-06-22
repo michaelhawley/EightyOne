@@ -1,5 +1,12 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
+
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
+import "../scss/styles.scss"
+import "../scss/blog.scss"
+
 // import Header from '../components/Header'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import GetImage from '../components/GetImage'
@@ -12,10 +19,37 @@ const Template = ({data, pageContext}) => {
     const title = markdownRemark.frontmatter.title
     const html = markdownRemark.html
     return (
-        <div>
-            {/* Header creates the header from the Header.js*/}
-            <p> placeholder</p>
-        </div>
+        
+
+            <Layout>
+                <div class = "PrimaryContainer">
+                <div class = "LeftContainer">a</div>
+                <div class = "CenterContainer_Blog">
+                
+                    <h1>{title}</h1>
+                    <div className = 'blogpost'
+                        dangerouslySetInnerHTML={{__html: html}}
+
+                    />
+                    {prev && <Link to={prev.frontmatter.path}>
+                        Previous
+                    </Link>
+                    }
+                    
+                    {next && <Link to={next.frontmatter.path}>
+                        Next
+                    </Link>
+                    
+                    }
+
+
+                </div>
+                <div class = "RightContainer">b</div>
+                
+                </div>
+            </Layout>
+
+        
     )
 }
 

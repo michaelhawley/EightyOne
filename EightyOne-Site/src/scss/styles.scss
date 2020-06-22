@@ -1,6 +1,20 @@
 
 @import "basics.scss";
 
+  .Wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+  }
+
+  .Expand{
+    height:10px;
+    flex-grow: 1;
+    
+}
+
+
   .HeaderStyle{
     height: 100px;
   }
@@ -10,12 +24,21 @@
     font-family: 'Work Sans';
   }
 
+  .PrimaryContainerHeader{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // border: 1px solid red;
+    display: flex;
+    
+  }
+
   .PrimaryContainer{
     width: 100%;
 
     // border: 1px solid red;
     display: flex;
-    border: 1px solid black;
+    
   }
   .CenterContainer{
     // border: 1px solid blue;

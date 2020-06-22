@@ -9,7 +9,7 @@ import Logo from "./logo"
 
 const Header = () => (
   <header>
-    <div class = "PrimaryContainer">
+    <div class = "PrimaryContainerHeader">
       <div class = "LeftContainer"></div>
       <div class = "CenterContainer">
       <Logo />

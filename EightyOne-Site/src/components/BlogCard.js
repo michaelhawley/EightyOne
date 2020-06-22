@@ -14,8 +14,7 @@ function ImgCatch(image){
         return (
             
                 <div class = "CardImage" >
-                    {/* <Img fluid={image.image} style={{ margin: '1rem', maxHeight: '100%' }}
-                    imgStyle={{ objectFit: 'contain' }} /> */}
+
 
                     <Link to = {image.link}> <Img fluid={image.image} className = {ReactStyles.ImgTest} /></Link>
                 </div>

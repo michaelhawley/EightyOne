@@ -23,7 +23,7 @@ const Template = ({data, pageContext}) => {
 
             <Layout>
                 <div class = "PrimaryContainer">
-                <div class = "LeftContainer">a</div>
+                <div class = "LeftContainer"></div>
                 <div class = "CenterContainer_Blog">
                 
                     <h1>{title}</h1>
@@ -44,7 +44,7 @@ const Template = ({data, pageContext}) => {
 
 
                 </div>
-                <div class = "RightContainer">b</div>
+                <div class = "RightContainer"></div>
                 
                 </div>
             </Layout>

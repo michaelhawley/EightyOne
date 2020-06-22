@@ -9,7 +9,9 @@ function Logo(){
     
     return(
         <div class = "LogoDiv"> 
-            <h1 class = "LogoP">EightyOne</h1>
+            <Link to= '/'>
+                <h1 class = "LogoP">EightyOne</h1>
+            </Link>
         </div>
     )
 }

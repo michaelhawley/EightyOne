@@ -1,7 +1,7 @@
 ---
 path: "/second-post"
 date: "2020-06-11"
-title: "My Second Post"
+title: "My Second Post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis pulvinar malesuada."
 tags: ['this', 'Python', 'second']
 excerpt: "A second"
 image: '2020-06-10-second-post'

@@ -7,9 +7,7 @@ import SEO from "../components/seo"
 import "../scss/styles.scss"
 import "../scss/blog.scss"
 
-// import Header from '../components/Header'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import GetImage from '../components/GetImage'
+
 
 const Template = ({data, pageContext}) => {
     

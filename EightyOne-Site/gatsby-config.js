@@ -6,7 +6,49 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
+
+    {
+      resolve: `gatsby-transformer-remark`,
+      options:{
+        plugins: [
+          {
+            resolve: "gatsby-remark-grid-tables"
+          },
+          {
+            resolve: "gatsby-remark-images-grid"
+          },
+        
+          { resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              quality: 100,
+            },
+          },
+
+        
+        ],
+      }
+    },
+
+        // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options:{
+    //     plugins: [
+    //       { resolve: "gatsby-remark-images-grid",
+    //         options: {
+    //           className: "myCustomClassName",
+    //           gridGap: "20px",
+    //           margin: "20px auto",
+    //       },
+    //       },
+    //     ],
+    //   }
+    // },
+    
+
+
+
+
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -30,9 +72,6 @@ module.exports = {
         path: `${__dirname}/src/blogPosts`,
       },
     },
-
-
-
 
 
     `gatsby-transformer-sharp`,

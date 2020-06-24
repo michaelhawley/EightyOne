@@ -30,20 +30,7 @@ module.exports = {
       }
     },
 
-        // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options:{
-    //     plugins: [
-    //       { resolve: "gatsby-remark-images-grid",
-    //         options: {
-    //           className: "myCustomClassName",
-    //           gridGap: "20px",
-    //           margin: "20px auto",
-    //       },
-    //       },
-    //     ],
-    //   }
-    // },
+
     
 
 

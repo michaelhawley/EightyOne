@@ -6,37 +6,54 @@ import R from '../scss/navbar.module.scss';
 
 
 function NavLink(data){
-    
+    if (data.Type ==="Down"){
+        console.log("down")
+        return(
+            <div class = "NavButtonDown">
+                <Link to = {data.Link} className = {R.NavLink}> 
+                    <div class = "NavCentreDown">{data.Text}</div>
+                </Link>
+            </div>
+            
+        )
+    }else{
     return(
         <div class = "NavButton"> 
             <Link to = {data.Link} className = {R.NavLink}> 
                 <div class = "NavEmptyHeight">
                     <div class = "NavButtonHeight">
-                        <p class = "NavCentre">{data.Text}</p>
+                        <div class="NavEmptyHeight">
+                            <p class = "NavCentre">{data.Text}</p>
+                        </div>
                     </div>
                 </div>
             </Link>
         </div>
-    )
+    )}
 }
 
 
-class Navbar extends React.Component {
-    render() {
-        // NavContainer - Span the page
-        // Nav Button -  Control Width
-        return(
-        <div class = "NavContainer"> 
-            <NavLink Link= '/tags/R' Text = "R Stats" />
-            <NavLink Link= '/tags/R' Text = "Python" />
-            <NavLink Link= '/tags/R' Text = "Excel" />
-            <NavLink Link= '/tags/R' Text = "PowerBI" />
-            <NavLink Link= '/tags/R' Text = "SQL" />
-        </div>
-        )
+function DropDown (props) {
+
         
+        return(
+            
+
+                    <div class = {props.type === "Down" ? 'NavContainerDown' : 'NavContainer'} >  
+                        <NavLink Link= '/tags/R' Text = "R Stats" Type = {props.type} />
+                        <NavLink Link= '/tags/Python' Text = "Python" Type = {props.type}/>
+                        <NavLink Link= '/tags/Excel' Text = "Excel" Type = {props.type} />
+                        <NavLink Link= '/tags/PowerBI' Text = "PowerBI" Type = {props.type} />
+                        <NavLink Link= '/tags' Text = "All Topics"  Type = {props.type}/>
+                        <NavLink Link= '/about' Text = "About" Type = {props.type}/>
+                    </div>
+                
+            
+        )
     }
 
-}
 
-export default Navbar;
+
+export {DropDown}; 
+
+

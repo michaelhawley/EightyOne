@@ -11,7 +11,9 @@ const AllTagsTemplate = ({data, pageContext }) => {
             <div>
                 <ul>
                     {tags.map((tagName, index) => {
+                        console.log(tagName)
                     return(
+                        
                         <li>
                             <Link to ={`tags/${tagName}`}>
                                 {tagName}

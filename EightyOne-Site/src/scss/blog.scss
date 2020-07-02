@@ -1,12 +1,100 @@
 
+@import "basics.scss";
+
+
+// establish available blog template styles
+h1 {
+    color: $Color_Main;
+    font-family: $Font_Main;
+    font-size: 32px;
+}
+
+h2 {
+    color: $Color_Main;
+    font-family: $Font_Main;
+    font-size: 20px;
+}
+
+h3 {
+    color: $Color_Main;
+    font-family: $Font_Main;
+    font-size: 20px;
+}
+
+ul {
+    padding-left: 40px;
+}
 
 .blogpost{
     color: rgb(48, 48, 48)
-
-    
 }
 
 p {
     text-align: justify;
     text-justify: inter-word;
+    font-family: $Font_P;
+}
+
+.imageContainer{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    
+}
+
+.imageContained{
+    min-width: 100px;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.textContained{
+    padding-top: 10px;
+    width:100px;
+    flex-grow: 1;
+}
+
+.textContained ul {
+    padding-left: 0px;
+}
+
+.code{
+    font-family: $Font_Code;
+    color: rgb(59, 59, 59);
+    font-size: 16px;
+}
+
+.CodeTable table, td{ 
+    border: none;
+}
+
+.CodeTable td{ 
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.CTR{
+    vertical-align: center;
+}
+
+.CTL{
+    vertical-align: center;
+    text-align: right;
+
+}
+
+.doubleImageContainer{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.doubleImage{
+    min-width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+    padding: 10px;
 }

@@ -1,13 +1,30 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap);
+
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap);
+
 
 $Color_Main: rgb(192, 0, 0);
 $Stroke_Thin: 1px;
 
 $Font_Title: 'Work Sans';
+$Font_Main: 'Work Sans', sans-serif;
 $Weight_Title_Heavy: 500;
 $Weight_Title_Light: 300;
 
+$Font_P: 'Roboto Slab', serif;
+$Font_Code: 'Roboto Mono', monospace;
+
+
 $MarginWidth: 4%;
 $MarginWidthN: 40px;
+
+$LinkHoverColor: #ef473a;
+$LinkColor: $Color_Main;
+
+$BorderCheck: 0px solid black;
+
+$BurgerSize: 40px;

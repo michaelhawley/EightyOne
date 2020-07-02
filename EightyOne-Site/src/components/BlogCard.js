@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql, useStaticQuery, Link} from 'gatsby'
+import { Link} from 'gatsby'
 import Card from 'react-bootstrap/Card';
 import Img from "gatsby-image"
 import ReactStyles from '../scss/Card.module.scss'; 

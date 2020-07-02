@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "gatsby"
+//import {Link} from "gatsby"
 import Layout from "../components/layout"
 
 
@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 const SingleTagTemplate = ({data, pageContext}) => {
     console.log(pageContext)
     const {posts, tagName} = pageContext
+    console.log(posts)
     return (
 
         <Layout>

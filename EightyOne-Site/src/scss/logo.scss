@@ -2,63 +2,20 @@
 
 @import "basics.scss";
 
-@media (max-width: 767px) {
-    .BurgerContainer{
-        display: inherit;
-    }
-}
-
-@media (min-width: 767px) {
-    .BurgerContainer{
-        display: none;
-    }
-}
 
 
-.BurgerContainer{
-    height: 20px;
-    width: 10px;
-    margin-top: 0;
-    margin-bottom: auto;
-    // background-color: rgb(194, 194, 194);
-}
-
-// @media (min-width: 767px) {
-//     .BurgerContainer{
-//         display: none;
-//     }
-// }
 
 .BurgerCentre{
     height:100%;
-    // background-color: rgb(177, 70, 70);
 }
 
 
-.BurgerCentre .button{
-    outline:none;
-}
 
 
-.LogoContainer{
-    display: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-  
-}
 
-.LogoDiv{
-    max-width: 60%;
-    width: 300px;
-    height: 50px;
-    margin-right: auto;
-}
 
-.LogoP{
-    color: $Color_Main;
-    font-family: 'Work Sans';
-}
+
+
 
 .Ham{
     display: none;

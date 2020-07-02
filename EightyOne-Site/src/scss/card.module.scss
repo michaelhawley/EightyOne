@@ -1,61 +1,42 @@
 
-
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import "basics.scss";
 
 .ColCard{
-    
     width: 100%;
     max-width:  100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    
-
 }
 
 .RowCard{
-
     padding-bottom: 0px;
     padding-top: 0px;
-
 }
 
 .BlogCard{
-
     font-style: normal;
     height: 100%;
     width: 100%;
     max-width:  100%;
-    
     padding-left: 10px;
     border: none;
-
-
-
-    /*background-image: linear-gradient(to right , #cb2d3e , #ef473a);*/
 }
-
-
 
 .CardTitle{
     padding-top: 1em;
-
 }
 
 .CardLink{
-
-    
-    font-family: 'Work Sans', sans-serif;
-    
-    color: rgb(0, 0, 0);
+    font-family: $Font_Main;
+    color: $LinkColor;
     font-size: 20px;
     text-decoration: none;
-
 }
 
 .CardLink:hover {
-    color: rgba(128, 128, 128, 0.247);
+    color: $LinkHoverColor;
     text-decoration: none;
-    color: #ef473a;
+
 }
 
 .ImgTest {

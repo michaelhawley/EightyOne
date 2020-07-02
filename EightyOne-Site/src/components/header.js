@@ -1,14 +1,19 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React , { useState } from "react"
+import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../scss/styles.scss"
-import styled from 'styled-components'
-import NavbarWide , {DropDown} from "./navbar"
+
+import {DropDown} from "./navbar"
+
+
 import "../scss/logo.scss"
-import LogoAlt from "./logoAlt"
+
 import "../scss/navbar.scss"
 import "../scss/burger.scss"
+
+import "../scss/header.scss"
+
+
 
 class Header extends React.Component {
   
@@ -17,10 +22,10 @@ class Header extends React.Component {
       this.state = {isToggleOn: true};
       // This binding is necessary to make `this` work in the callback
       this.handleClick = this.handleClick.bind(this);
-      this.a = `hamburger hamburger--collapse is-active`
     }
 
   handleClick() {   
+    console.log(this.state)
     this.setState(state => ({
       isToggleOn: !state.isToggleOn,
     }))
@@ -30,27 +35,29 @@ class Header extends React.Component {
       <header>
         
         <div class = "PrimaryContainerHeader">
-          
           <div class = "LeftContainer"></div>
           <div class = "CenterContainer">
             <div class = "zBoost">
               <div class = "LogoContainer">
                 <div class = "LogoDiv"> 
-                    <Link to= '/'>
-                        <h1 class = "LogoP">EightyOne</h1>
+                    <Link to= '/' style={{ textDecoration: 'none' }}>
+                        <h2 class = "LogoP">EightyTwo</h2>
+                     
                     </Link>
+                   
                 </div>
                 
                 <div class = "BurgerContainer">
-                  <div class = "BurgerCentre">
-                    <button class = {this.state.isToggleOn ? 'hamburger hamburger--collapse' : 'hamburger hamburger--collapse is-active'}  type="button" onClick={this.handleClick}>
-                        {/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
+                  
+                    <button class = {this.state.isToggleOn ? 'hamburger hamburger--collapse BurgCenter' : 'hamburger hamburger--collapse is-active BurgCenter'}  type="button" onClick={this.handleClick}>
                         <span class="hamburger-box"> 
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                  </div>
+                  
                 </div>
+
+  
               </div>
               <DropDown type = {"Across"}/> {/* Appears on wide view, disappears on small view */}
             </div>

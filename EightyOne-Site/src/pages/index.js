@@ -1,21 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+
 import "../scss/styles.scss"
 
 import BlogFrame from '../components/BlogFrame'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Testing (a,b) {
-  console.log(a)
-  return (
-    <div>abc</div>
-  )
-}
+
 
 
 const IndexPage = ({data}) => { 

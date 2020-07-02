@@ -7,11 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import WebFooter from "./footer"
-import "../scss/styles.scss"
-import R from "../scss/footer.module.scss"
+
 
 const Expand = () => {
   return (<div class = "Expand"> </div>)

@@ -10,13 +10,13 @@ import '../scss/card.scss';
 function ImgCatch(image){
     
     if(image.image){
-        
+        console.log(image.image)
         return (
             
-                <div class = "CardImage" >
+                <div  >
 
-
-                    <Link to = {image.link}> <Img fluid={image.image} className = {ReactStyles.ImgTest} /></Link>
+                    <Link to = {image.link}> <Img sizes={{ ...image.image, aspectRatio: 5/3 }}  className = {ReactStyles.ImgTest}/></Link>
+                    {/* <Link to = {image.link}> <Img fluid={image.image} sizes={{aspectRatio: 4/3}} className = {ReactStyles.ImgTest} /></Link> */}
                 </div>
             
         )}
@@ -40,9 +40,10 @@ function BlogCard(d) {
                     <div class = "CardText">
                         <Card.Title className = {ReactStyles.CardTitle}>  
                             <Link to ={d.pathSlug} className = {ReactStyles.CardLink}> {d.titleSlug}  </Link>
+                            <p class = "PExcerpt">{d.excerptSlug} </p>
+                      
                         </Card.Title>
                     </div>
-                
             </Card>
             
         

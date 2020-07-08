@@ -3,12 +3,10 @@ path: "/TextInPivotTables"
 date: "2020-067-01"
 title: "Text in pivot tables"
 tags: ['Excel', 'PowerBI', 'Aviation']
-excerpt: "Blank"
-image: 'TitleTextInPivot'
-images:
-  - /images/Title_R.png
-  - /images/image2.jpg
-  - /images/image3.jpg
+excerpt: "How to get Pivot Tables to show text as an output"
+image: "./Title_TextInPivot.png"
+thumbnail: "./Title_TextInPivot2.png"
+
 ---
 
 <p>

@@ -7,9 +7,10 @@ const NPerLine = 2
 
 function BlogFrame(b){
     // extract the data
+
+
     const blogData = b.data
-    const images = b.images
-   
+    
 
     // work out how many rows and columns we need
     const nBlogs = b.data.length
@@ -21,42 +22,24 @@ function BlogFrame(b){
         const Columns = nCols.map((c, index) =>{return(<MakeColumn key = {index} row = {data.id} col = {c} /> ) })
         return(<Row className={ReactStyles.RowCard} >{Columns}</Row>)}
 
-    function FrontImage(ImageId){
-        
-        const Find = ImageId.substring(0, ImageId.indexOf('/'))
-        
 
-        const regex = new RegExp(`^${Find}/`);
-        const matchingImages = images.filter(function(x){
-            return x.node.relativePath.match(regex) ;
-          })
-      
-        
-        if (matchingImages.length === 0){
-            return (null)
-        }
-        else{
-            return (
-                matchingImages[0].node.childImageSharp.fluid
-            )
-        }
+
     
 
-    }
-
     function MakeColumn(data){
+     
+
         const id = data.row * NPerLine + data.col // work out which blog we want to calll
         if (id < nBlogs){
-            const blogDetails = (blogData[id].node)
+            const blogDetails = (blogData[id])
+
             const blogContent = blogDetails.frontmatter
-            const idImage = (blogDetails.parent.relativePath) // get the associated image
-            const BlogImage = FrontImage(idImage)
+            const BlogImage = blogDetails.frontmatter.thumbnail.childImageSharp.fluid
             
-            console.log(b)        
+       
             return(
-                <Col md className={ReactStyles.ColCard}>
-                    
-                    <BlogCard pathSlug = {blogContent.path} titleSlug = {blogContent.title} blogimage = {BlogImage} blogID = {id}/>
+                <Col md className={ReactStyles.ColCard}>    
+                    <BlogCard pathSlug = {blogContent.path} titleSlug = {blogContent.title} excerptSlug = {blogContent.excerpt} blogimage = {BlogImage} blogID = {id}/>
                 </Col>
             ) 
         }else{

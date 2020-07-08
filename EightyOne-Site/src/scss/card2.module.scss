@@ -6,7 +6,6 @@
     max-width:  100%;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
 
 .RowCard{
@@ -16,16 +15,15 @@
 
 .BlogCard{
     font-style: normal;
-    width: 100%;
-    height: 100%;
+    height: 200px;
+    width: 200px;
     max-width:  100%;
     padding-left: 10px;
-    border: none;
-
+    border: 1px solid black;
 }
 
 .CardTitle{
-    text-decoration: none;
+    padding-top: 1em;
 }
 
 .CardLink{

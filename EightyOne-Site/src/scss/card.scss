@@ -1,10 +1,18 @@
+@import "basics.scss";
+
 .CardImage{
-    height: 300px;
+    border: none;
 
 }
 
 .CardText{
-    color:black
+    color:black;
 
 }
 
+.PExcerpt{
+    color: $Color_Second;
+    font-size: 14px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}

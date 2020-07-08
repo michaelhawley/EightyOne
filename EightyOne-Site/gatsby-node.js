@@ -38,13 +38,13 @@ const createTagPages = (createPage, posts) => {
         }
     })
     tags.forEach(tagName => {
-        const posts = postsByTag[tagName]
+        const edges = postsByTag[tagName]
 
         createPage({
             path: `/tags/${tagName}`,
             component: singleTagIndexTemplate,
             context: {
-                posts,
+                edges,
                 tagName
             }
         })
@@ -70,7 +70,8 @@ exports.createPages = (({graphql, actions}) => {
             graphql(
                 `query{
                     allMarkdownRemark(
-                        sort: {order: ASC, fields: [frontmatter___date]}
+                        filter: {fileAbsolutePath: { regex: "/(blogPosts)/" }}
+                        sort: {order: DESC, fields: [frontmatter___date]}
                     ) {
                         edges {
                             node {
@@ -78,7 +79,22 @@ exports.createPages = (({graphql, actions}) => {
                                     path
                                     title
                                     tags
-                                    image
+                                    date
+                                    thumbnail { 
+                                        relativeDirectory
+                                        childImageSharp {
+                                            id
+                                            fluid(maxWidth: 500, quality: 100){
+                                                base64
+                                                aspectRatio
+                                                src
+                                                srcSet
+                                                sizes
+                                                
+                                              }
+                                          }
+                                     }
+                                    
                                 }
                             }
                         }

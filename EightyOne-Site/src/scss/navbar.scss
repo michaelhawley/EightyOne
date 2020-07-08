@@ -11,7 +11,7 @@ $NavContainerHeight: 50px;
     width: 100%;
     position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: $Frame1) {
     .DropDisapear{
         position: relative;
         display: inherit;
@@ -21,7 +21,7 @@ $NavContainerHeight: 50px;
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: $Frame1) {
     .DropDisapear{
         position: relative;
         display: none;
@@ -76,8 +76,8 @@ $NavContainerHeight: 50px;
 
 .NavContainer{
     height: $NavContainerHeight;
-    width: 100% ;
     border-bottom: $Stroke_Thin solid $Color_Main;
+    border: 1px solid red;
 }
 
 

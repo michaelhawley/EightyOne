@@ -7,24 +7,30 @@ import "../scss/styles.scss"
 import BlogFrame from '../components/BlogFrame'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FlexFrame from "../components/FlexFrame";
 
 
 
 
 const IndexPage = ({data}) => { 
   
-  
+  console.log(data)
+
   const {edges} = data.BlogPosts
-  const images = data.TitleImages.edges
+  console.log({edges})
 
-
+  const post = edges.map((e) => {
+    return e.node
+  });
+  console.log({post})
 
   return(
   <Layout>
     <div class = "PrimaryContainer">
       <div class = "LeftContainer"></div>
       <div class = "CenterContainer">
-        <BlogFrame data = {edges} images = {images} />  
+        {/* <FlexFrame data = {edges} images = {images} />   */}
+        <BlogFrame data = {post} type = {"index"} />  
       </div>
       <div class = "RightContainer"></div>
        
@@ -43,59 +49,24 @@ export const query = graphql`
     {  
       edges {
         node {
-          parent {
-        	... on File {
-            relativePath
-        	}
-      		}
+
           
           frontmatter {
             title
+            excerpt
             path
-            image
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 100) {
+                  src
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }  
       }      
     }
-
-    TitleImages: allFile(
-      filter: {
-        sourceInstanceName: {eq: "blogPosts"}
-        name: {regex: "/^.itle/"} 
-      }
-      
-      )
-  {
-    edges {
-      node {
-      relativePath
-      childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-            
-          }
-        }
-      }
-    }
-  }
-
-    BackupImage: allFile(filter: {
-        sourceInstanceName: {eq: "images"}
-        name: {regex: "/^.ackup/"}
-      })
-    {
-      edges {
-        node {
-        childImageSharp {
-            fluid(maxWidth: 300, quality: 50) {
-          originalName
-            }
-          }
-        }
-      }
-    }
-
-    
   }
   
 `

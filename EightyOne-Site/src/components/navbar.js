@@ -40,12 +40,11 @@ function DropDown (props) {
             
 
                     <div class = {props.type === "Down" ? 'NavContainerDown' : 'NavContainer'} >  
-                        <NavLink Link= '/tags/R' Text = "R Stats" Type = {props.type} />
-                        <NavLink Link= '/tags/Python' Text = "Python" Type = {props.type}/>
-                        <NavLink Link= '/tags/Excel' Text = "Excel" Type = {props.type} />
-                        <NavLink Link= '/tags/PowerBI' Text = "PowerBI" Type = {props.type} />
-                        <NavLink Link= '/tags' Text = "All Topics"  Type = {props.type}/>
-                        <NavLink Link= '/about' Text = "About" Type = {props.type}/>
+                        <NavLink Link= '/tags/R' Text = "Projects" Type = {props.type} />
+                        <NavLink Link= '/tags/Python' Text = "Tips" Type = {props.type}/>
+                        <NavLink Link= '/tags/Excel' Text = "Tags" Type = {props.type} />
+                        <NavLink Link= '/tags/PowerBI' Text = "About" Type = {props.type} />
+
                     </div>
                 
             

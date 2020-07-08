@@ -1,21 +1,29 @@
 import React from "react"
 //import {Link} from "gatsby"
 import Layout from "../components/layout"
-
-
+import Img from "gatsby-image"
+import BlogFrame from '../components/BlogFrame'
 
 const SingleTagTemplate = ({data, pageContext}) => {
-    console.log(pageContext)
-    const {posts, tagName} = pageContext
-    console.log(posts)
+    
+    const {edges, tagName} = pageContext
+    // console.log(edges[0].frontmatter.thumbnail.childImageSharp.fluid)
+
+    console.log({edges})
     return (
 
         <Layout>
         <div class = "PrimaryContainer">
           <div class = "LeftContainer"></div>
           <div class = "CenterContainer">
+            <BlogFrame data = {edges} type = {"index"} />  
+
             {`${tagName}`}
+            {/* <Img fluid={edges[0].frontmatter.thumbnail.childImageSharp.fluid} /> */}
+             
+            test
           </div>
+          
           <div class = "RightContainer"></div>
            
         </div>
@@ -25,6 +33,10 @@ const SingleTagTemplate = ({data, pageContext}) => {
 }
 
 export default SingleTagTemplate
+
+
+
+
 
 // <div>
 // <div>

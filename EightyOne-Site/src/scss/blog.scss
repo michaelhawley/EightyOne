@@ -25,6 +25,10 @@ ul {
     padding-left: 40px;
 }
 
+ol {
+    padding-left: 40px;
+}
+
 .blogpost{
     color: rgb(48, 48, 48)
 }
@@ -34,6 +38,14 @@ p {
     text-justify: inter-word;
     font-family: $Font_P;
 }
+
+.no_break{
+    margin-bottom:0px;
+    line-height: inherit;
+}
+
+
+
 
 .imageContainer{
     width:100%;
@@ -62,10 +74,14 @@ p {
 
 .code{
     font-family: $Font_Code;
-    color: rgb(59, 59, 59);
+    font-weight: 500;
+    color: $Color_Main;
     font-size: 16px;
 }
 
+.CodeTable{
+    margin: 0px;
+}
 .CodeTable table, td{ 
     border: none;
 }
@@ -76,11 +92,11 @@ p {
 }
 
 .CTR{
-    vertical-align: center;
+    vertical-align: top;
 }
 
 .CTL{
-    vertical-align: center;
+    vertical-align: top;
     text-align: right;
 
 }
@@ -98,3 +114,70 @@ p {
     flex-grow: 1;
     padding: 10px;
 }
+
+
+.codeTableDoubleContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.codeTableDoubleContainerSub{
+    min-width: 425px;
+    width: 50%;
+    border: 0.5px solid grey;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.codeTableDouble td {
+    padding: 0px;
+    border: .1px solid grey;
+}
+
+.codeTableDouble tr>:nth-child(1){
+    font-family: $Font_Code;
+    font-size: 12px;
+    text-align: right;
+    vertical-align: top;
+    padding-left: 6px;
+    padding-right: 6px;
+    color:black;
+    font-weight: bold;
+}
+.codeTableDouble tr>:nth-child(2){
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+.codeTableDouble tr>:nth-child(1).TableTest{
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        font-size: medium;
+    }
+    
+
+
+.TR1H {
+    background-color: $TC1;
+      
+}
+.TR1 {background-color: $TC1L;}
+.TR2H {background-color: $TC2;}
+.TR2 {background-color: $TC2L;}
+.TR3H {background-color: $TC3;}
+.TR3 {background-color: $TC3L;}
+.TR4H {background-color: $TC4;}
+.TR4 {background-color: $TC4L;}
+.TR5H {background-color: $TC5;}
+.TR5 {background-color: $TC5L;}
+.TR6H {background-color: $TC6;}
+.TR6 {background-color: $TC6L;}
+

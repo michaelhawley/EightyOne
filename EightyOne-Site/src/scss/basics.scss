@@ -7,7 +7,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap);
 
 
+$WidthSwitch: 767px;
+
+
 $Color_Main: rgb(192, 0, 0);
+$Color_Second: rgb(192, 0, 0);
 $Stroke_Thin: 1px;
 
 $Font_Title: 'Work Sans';
@@ -20,7 +24,7 @@ $Font_Code: 'Roboto Mono', monospace;
 
 
 $MarginWidth: 4%;
-$MarginWidthN: 40px;
+$MarginWidthN: 80px;
 
 $LinkHoverColor: #ef473a;
 $LinkColor: $Color_Main;
@@ -28,3 +32,36 @@ $LinkColor: $Color_Main;
 $BorderCheck: 0px solid black;
 
 $BurgerSize: 40px;
+
+
+$BasicWidth: 1200px;
+$CardSizeX: 400px;
+$MinSize: $BasicWidth;
+
+
+
+
+$Frame2: $BasicWidth;
+$Frame1: $Frame2/2;
+
+
+$MarginLimit: $MarginWidthN * 2 + $BasicWidth;
+
+// when the centre container starts shrinking make a change
+
+//Colors
+
+//Table Colors
+$TC1: #05668d;
+$TC2: #028090;
+$TC3: #00a896;
+$TC4: #02c39a;
+$TC5: #364958;
+$TC6: #586d7e;
+$TC1L: #05668d41;
+$TC2L: #87bba280;
+$TC3L: #63d0e680;
+$TC4L: #02c39a80;
+$TC5L: #36495880;
+$TC6L: #586d7e80;
+
